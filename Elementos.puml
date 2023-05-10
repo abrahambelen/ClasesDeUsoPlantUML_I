@@ -12,4 +12,10 @@ Cliente -- (Cancelar pedido)
 (Confirmar pedido) ..> (Devolver cambio) : <<include>>
 (Cancelar pedido) ..> (Devolver cambio) : <<include>>
 
+
+(Acceder)
+(Registrarse)
+
+(Acceder) <.. (Registrarse) : <<extend>>
+
 @enduml
