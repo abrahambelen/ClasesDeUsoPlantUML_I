@@ -1,8 +1,18 @@
 @startuml
 
 actor Cliente
+actor Restarurante
+
+(Entregar comida)
+
+rectangle {
 (Mostrar menú)
+(Pedir comida)
+}
 
 Cliente -- (Mostrar menú)
+Cliente -- (Pedir comida)
+Restarurante -- (Entregar comida)
+Restarurante -- (Mostrar menú)
 
 @enduml
