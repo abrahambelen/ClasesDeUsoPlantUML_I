@@ -1,21 +1,14 @@
 @startuml
 
-actor Cliente
+:Cliente:
+:Cliente VIP:
 
-(Confirmar pedido)
-(Cancelar pedido)
-(Devolver cambio)
+(Reservar vuelo)
+(Elegir asientos)
 
-Cliente -- (Confirmar pedido)
-Cliente -- (Cancelar pedido)
+:Cliente: -- (Reservar vuelo)
+:Cliente VIP: -- (Elegir asientos)
 
-(Confirmar pedido) ..> (Devolver cambio) : <<include>>
-(Cancelar pedido) ..> (Devolver cambio) : <<include>>
-
-
-(Acceder)
-(Registrarse)
-
-(Acceder) <.. (Registrarse) : <<extend>>
+:Cliente: <|-- :Cliente VIP:
 
 @enduml
