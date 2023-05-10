@@ -1,23 +1,26 @@
 @startuml
 
-:new Actor:
+:Usuario:
+:Administrador:
 
-(Identificarse)
-(Pagar)
-(Elegir mensajero)
-(Confirmar)
-(Registrarse)
-(Pagar con tarjeta)
-(Pagar con trasferencia)
+(Iniciar sesión)
+(Recuperar contraseña)
+(Modificar contraseña)
+(Cerrar sesión)
+(Registrar usuario)
+(Instalar programa)
 
-:new Actor: -- (Identificarse)
-:new Actor: -- (Pagar)
-:new Actor: -- (Elegir mensajero)
-:new Actor: -- (Confirmar)
+:Usuario: -- (Iniciar sesión)
+:Usuario: -- (Recuperar contraseña)
+:Usuario: -- (Modificar contraseña)
+:Usuario: -- (Cerrar sesión)
 
-(Identificarse) <.. (Registrarse) : <<extend>>
-(Pagar) <|-- (Pagar con tarjeta)
-(Pagar) <|-- (Pagar con trasferencia)
+:Administrador: -- (Registrar usuario)
+:Administrador: -- (Instalar programa)
+
+:Usuario: <|-- :Administrador:
+
+
 
 
 @enduml
