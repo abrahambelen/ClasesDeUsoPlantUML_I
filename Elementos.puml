@@ -1,18 +1,15 @@
 @startuml
 
 actor Cliente
-actor Restarurante
 
-(Entregar comida)
+(Confirmar pedido)
+(Cancelar pedido)
+(Devolver cambio)
 
-rectangle {
-(Mostrar menú)
-(Pedir comida)
-}
+Cliente -- (Confirmar pedido)
+Cliente -- (Cancelar pedido)
 
-Cliente -- (Mostrar menú)
-Cliente -- (Pedir comida)
-Restarurante -- (Entregar comida)
-Restarurante -- (Mostrar menú)
+(Confirmar pedido) ..> (Devolver cambio) : <<include>>
+(Cancelar pedido) ..> (Devolver cambio) : <<include>>
 
 @enduml
